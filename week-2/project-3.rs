@@ -4,6 +4,8 @@ fn main(){
 	let n:f64 = 3.0;
 
 	let a = p * ((1.0 - (r / 100.0)).powf(n));
+	let c = a - p;
 
 	println!("The value of the television after 3 years is {}.", a);
+	println!("The depreciation is {}.", c);
 }

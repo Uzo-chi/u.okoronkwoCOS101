@@ -8,26 +8,8 @@ fn main() {
     input.read_line(&mut num).expect("Not a valid string!");
     let num:usize = num.trim().parse().expect("Not a valid integer!");
 
-    let mut sibling_info:[[String;5];20] = [["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()],
-        ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()]];
+    let mut sibling_info:[[String;5];20] = Default::default();
+    
 
     for i in 0..num {
         sibling_info[i] = builder();
@@ -48,13 +30,13 @@ fn main() {
 
 fn builder() -> [String;5] {
     let input = io::stdin();
-    let mut occ = String::new();
-    let mut relation = String::new();
+    let _occ = String::new();
+    let _relation = String::new();
     let mut name = String::new();
     let mut age = String::new();
     let mut arr1:[String;5] = ["".to_string(), "".to_string(), "".to_string(), "".to_string(), "".to_string()];
 
-    println!("What is your sibling's first name?:");
+    println!("\nWhat is your sibling's first name?:");
     input.read_line(&mut name).expect("Not a valid string!");
     let name = name.trim();
 
@@ -96,7 +78,7 @@ fn builder() -> [String;5] {
                 arr1[2] = format!("Marital Status: {}",relation);
                 arr1[3] = format!("Occupation: {}",occ);
             } else {
-                let arr1 = ["", "", "", "", ""];
+                let _arr1 = ["", "", "", "", ""];
             }
         } else if status == 'm' {
             let relation = "Married";
@@ -116,7 +98,7 @@ fn builder() -> [String;5] {
             arr1[3] = format!("City: {}",city);
             arr1[4] = format!("Number of children: {}",child);
         } else {
-            let arr1 = ["", "", "", "", ""];
+            let _arr1 = ["", "", "", "", ""];
         }
     } else {
         let mut waec = String::new();
@@ -150,7 +132,7 @@ fn builder() -> [String;5] {
             arr1[2] = format!("WAEC?: {}",wasscce);
             arr1[3] = format!("Class: {}",class);
         } else {
-            let arr1 = ["", "", "", "", ""];
+            let _arr1 = ["", "", "", "", ""];
         }
     }
     return arr1;

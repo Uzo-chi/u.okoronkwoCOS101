@@ -1,0 +1,6 @@
+COMPANY                        | MULTIPLE OF PERCENTAGE LEVERAGES   
+Champion Breweries Plc         | 16000000.0                         
+Flour Mills Nigeria Plc        | 8000000.0                          
+Unilever Nigeria Plc           | 22000000.0                         
+Honeywell Nigeria Plc          | 18000000.0                         
+Nigerian Breweries Plc         | 24000000.0                         
